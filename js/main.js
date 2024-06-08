@@ -1,5 +1,5 @@
 function TinhLuong() {
-    var luong1Ngay = 100;
+    var luong1Ngay = 100000;
     var soNgayLam = parseFloat(document.getElementById('inputSoNgayLam').value);
     var tongLuong = soNgayLam * luong1Ngay;
     var txtTongLuong = document.getElementById('txtTongLuong');
