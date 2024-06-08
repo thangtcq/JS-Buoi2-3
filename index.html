@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài tập DOM</title>
+    <link rel="shortcut icon" type="image/x-icon" href="./img/icon.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <div class="container py-5">
+
+        <div class="card w-75 mx-auto">
+            <div class="bg-holder d-none d-lg-block bg-card"></div>
+            <div class="card-body position-relative p-0">
+                <div class="row p-0">
+                    <div class="col-12 col-md-4 col-lg-3 col-xl-2 nav-tabs nav flex-md-column nav-pills"
+                        id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                        <button class="nav-link btn-tabs mb-2 active " id="v-pills-home-tab" data-bs-toggle="pill"
+                            data-bs-target="#bai1" type="button" role="tab" aria-controls="v-pills-home"
+                            aria-selected="true">Bài 1</button>
+                        <button class="nav-link btn-tabs mb-2" id="v-pills-profile-tab" data-bs-toggle="pill"
+                            data-bs-target="#bai2" type="button" role="tab" aria-controls="v-pills-profile"
+                            aria-selected="false">Bài 2</button>
+                        <button class="nav-link btn-tabs mb-2" id="v-pills-profile-tab" data-bs-toggle="pill"
+                            data-bs-target="#bai3" type="button" role="tab" aria-controls="v-pills-profile"
+                            aria-selected="false">Bài 3</button>
+                        <button class="nav-link btn-tabs mb-2" id="v-pills-profile-tab" data-bs-toggle="pill"
+                            data-bs-target="#bai4" type="button" role="tab" aria-controls="v-pills-profile"
+                            aria-selected="false">Bài 4</button>
+                        <button class="nav-link btn-tabs mb-2" id="v-pills-profile-tab" data-bs-toggle="pill"
+                            data-bs-target="#bai5" type="button" role="tab" aria-controls="v-pills-profile"
+                            aria-selected="false">Bài 5</button>
+                    </div>
+                    <div class="col-12 col-md-8 col-lg-9 col-xl-10 tab-content" id="v-pills-tabContent">
+                        <div class="tab-pane fade show active" id="bai1" role="tabpanel"
+                            aria-labelledby="v-pills-home-tab">
+                            <h4 class="card--heading">💰 Tính tiền lương nhân viên</h4>
+                            <div class="callout callout-info">
+
+                                <p>💡<b>Đề bài</b>
+                                <ul>
+                                    <li>Viết chương trình tính tiền lương nhân viên</li>
+                                    <li>Lương 1 ngày: 100.000</li>
+                                    <li>Cho phép người dùng nhập vào số ngày làm</li>
+                                    <li>Công thức tính lương: Lương 1 ngày * số ngày làm</li>
+                                </ul>
+
+                                💡<b>Mô hình 3 khối</b><br><br>
+                                Đầu vào: Số ngày làm<br><br>
+                                Các bước xử lý:<br>
+                                <ul>
+                                    <li>Tạo biến luong1Ngay, soNgayLam, tongLuong</li>
+                                    <li>Gán luong1Ngay = 100.000</li>
+                                    <li>Tính tổng lương theo công thức: tongLuong = luong1Ngay * soNgayLam;</li>
+                                    <li>In ra màn hình kết quả tongLuong</li>
+                                </ul>
+                                Đầu ra: Lương
+                                </p>
+
+                            </div>
+                            <form class="row gy-3 align-items-center px-2">
+                                <div class="col-12 col-lg-4">
+                                    <input type="number" class="form-control form__input" id="inputSoNgayLam"
+                                        placeholder="Số ngày làm">
+                                </div>
+
+                                <div class="col-12 col-lg-4">
+                                    <button class="btn btn--primary me-1 mb-1" type="button" id="btnTinhLuong"
+                                        onclick="TinhLuong();">
+                                        Tính lương
+                                    </button>
+                                </div>
+
+                                <div class="alert alert-success" role="alert">
+                                    👉<span id="txtTongLuong"></span>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="tab-pane fade" id="bai2" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+                            <h4 class="card--heading">📚 Tính giá trị trung bình</h4>
+                            <div class="callout callout-info">
+
+                                <p>💡<b>Đề bài</b>
+                                <ul>
+                                    <li>Viết chương trình nhập vào 5 số thực</li>
+                                    <li>Tính giá trị trung bình của 5 số này và xuất ra màn hình</li>
+                                    <li>Gợi ý: Giá trị trung bình là tổng của 5 số người dùng nhập chia cho 5</li>
+                                </ul>
+
+                                💡<b>Mô hình 3 khối</b><br><br>
+                                Đầu vào: 5 số thực<br><br>
+                                Các bước xử lý:<br>
+                                <ul>
+                                    <li>Tạo biến soThuc1, soThuc2, soThuc3, soThuc4, soThuc5, giaTriTrungBinh</li>
+                                    <li>Tính giá trị trung bình theo công thức: giaTriTrungBinh = (soThuc1 + soThuc2 +
+                                        soThuc3 + soThuc4 + soThuc5) / 5
+                                    </li>
+                                    <li>In ra màn hình kết quả giaTriTrungBinh</li>
+                                </ul>
+                                Đầu ra: Giá trị trung bình
+                                </p>
+
+                            </div>
+                            <form class="row gy-3 align-items-center px-2 bai2">
+                                <div class="col-12 col-lg-4">
+                                    <input type="number" class="form-control form__input" id="inputSoThuc1"
+                                        placeholder="Nhập số thứ 1">
+                                </div>
+                                <div class="col-12 col-lg-4">
+                                    <input type="number" class="form-control form__input" id="inputSoThuc2"
+                                        placeholder="Nhập số thứ 2">
+                                </div>
+                                <div class="col-12 col-lg-4">
+                                    <input type="number" class="form-control form__input" id="inputSoThuc3"
+                                        placeholder="Nhập số thứ 3">
+                                </div>
+                                <div class="col-12 col-lg-4">
+                                    <input type="number" class="form-control form__input" id="inputSoThuc4"
+                                        placeholder="Nhập số thứ 4">
+                                </div>
+                                <div class="col-12 col-lg-4">
+                                    <input type="number" class="form-control form__input" id="inputSoThuc5"
+                                        placeholder="Nhập số thứ 5">
+                                </div>
+
+                                <div class="col-12">
+                                    <button class="btn btn--primary me-1 mb-1" type="button" id="btnTinhTrungBinh"
+                                        onclick="TinhGiaTriTrungBinh();">
+                                        Tính trung bình
+                                    </button>
+                                </div>
+                                <div class="alert alert-success" role="alert">
+                                    👉 <span id="txtGiaTriTrungBinh"></span>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="tab-pane fade" id="bai3" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+                            <h4 class="card--heading">💱 Quy đổi tiền</h4>
+                            <div class="callout callout-info">
+
+                                <p>💡<b>Đề bài</b>
+                                <ul>
+                                    <li>Giá USD hiện nay là 23.500 VND</li>
+                                    <li>Viết chương trình quy đổi từ USD sang VND</li>
+                                    <li>Cho người dùng nhập vào số tiền USD</li>
+                                    <li>Tính và xuất ra số tiền sau quy đổi VND</li>
+                                    <li>Ví dụ: Người dùng nhập 2 USD => Xuất ra 47.000 VND</li>
+                                </ul>
+
+                                💡<b>Mô hình 3 khối</b><br><br>
+                                Đầu vào: Số tiền USD<br><br>
+                                Các bước xử lý:<br>
+                                <ul>
+                                    <li>Tạo biến tiLeQuyDoi, soTienUSD, soTienVND</li>
+                                    <li>Gán tiLeQuyDoi = 23500</li>
+                                    <li>Tính số tiền VND theo công thức: soTienVND = soTienUSD * 23500</li>
+                                    <li>In ra màn hình kết quả soTienVND</li>
+                                </ul>
+                                Đầu ra: Số tiền VND
+                                </p>
+
+                            </div>
+                            <form class="row gy-3 align-items-center px-2">
+                                <div class="col-12 col-lg-4">
+                                    <input type="number" class="form-control form__input" id="inputSoTienUSD"
+                                        placeholder="Nhập số tiền USD">
+                                </div>
+
+                                <div class="col-12 col-lg-4">
+                                    <button class="btn btn--primary me-1 mb-1" type="button" id="btnQuyDoiTien"
+                                        onclick="QuyDoiTien();">
+                                        Quy đổi tiền
+                                    </button>
+                                </div>
+                                <div class="alert alert-success" role="alert">
+                                    👉 <span id="txtSoTienVND"></span>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="tab-pane fade" id="bai4" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+                            <h4 class="card--heading">📏 Tính diện tích, chu vi hình chữ nhật</h4>
+                            <div class="callout callout-info">
+
+                                <p>💡<b>Đề bài</b>
+                                <ul>
+                                    <li>Viết chương trình nhập vào 2 chiều dài và chiều rộng của hình chữ nhật</li>
+                                    <li>Tính và xuất ra diện tích, chu vi của hình chữ nhật đó</li>
+                                    <li>Công thức:</li>
+                                    <li>- Diện tích = Dài * Rộng</li>
+                                    <li>- Chu vi = (Dài + Rộng) * 2</li>
+                                </ul>
+
+                                💡<b>Mô hình 3 khối</b><br><br>
+                                Đầu vào: Chiều Dài & Chiều Rộng<br><br>
+                                Các bước xử lý:<br>
+                                <ul>
+                                    <li>Tạo biến chieuDai, chieuRong, chuVi, dienTich</li>
+                                    <li>Tính chu vi theo công thức: chuVi = (chieuDai + chieuRong) * 2</li>
+                                    <li>Tính diện tích theo công thức: dienTich = chieuDai * chieuRong</li>
+                                    <li>In ra màn hình kết quả chuVi & dienTich</li>
+                                </ul>
+                                Đầu ra: Chu Vi & Diện Tích
+                                </p>
+
+                            </div>
+                            <form class="row gy-3 align-items-center px-2">
+                                <div class="col-12 col-lg-4">
+                                    <input type="number" class="form-control form__input" id="inputChieuDai"
+                                        placeholder="Nhập chiều dài">
+                                </div>
+                                <div class="col-12 col-lg-4">
+                                    <input type="number" class="form-control form__input" id="inputChieuRong"
+                                        placeholder="Nhập chiều rộng">
+                                </div>
+
+                                <div class="col-12">
+                                    <button class="btn btn--primary me-1 mb-1" type="button" id="btnTinh"
+                                        onClick="TinhChuViDienTichHCN();">
+                                        Tính
+                                    </button>
+                                </div>
+                                <div class="alert alert-success" role="alert">
+                                    👉 <span id="txtKetQua"></span>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="tab-pane fade" id="bai5" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+                            <h4 class="card--heading">🧮 Tính tổng 2 ký số</h4>
+                            <div class="callout callout-info">
+
+                                <p>💡<b>Đề bài</b>
+                                <ul>
+                                    <li>Viết chương trình nhập vào 1 số có 2 chữ số (VD: 12, 44, 83)</li>
+                                    <li>Tính tổng 2 ký số của số vừa nhập</li>
+                                    <li>Ví dụ:</li>
+                                    <li>- 12 => Tổng là 1 + 2 = 3</li>
+                                    <li>- 44 => Tổng là 4 + 4 = 8</li>
+                                    <li>Gợi ý:</li>
+                                    <li>- Cách lấy số hàng đơn vị: int so_hang_dv = so % 10;</li>
+                                    <li>- Cách lấy số hàng chục: int so_hang_chuc = so / 10;</li>
+                                </ul>
+
+                                💡<b>Mô hình 3 khối</b><br><br>
+                                Đầu vào: Số có 2 chữ số<br><br>
+                                Các bước xử lý:<br>
+                                <ul>
+                                    <li>Tạo biến so, tong</li>
+                                    <li>Tính tổng theo công thức: tong = int(so % 10) + int(so / 10)</li>
+                                    <li>In ra màn hình kết quả tong</li>
+                                </ul>
+                                Đầu ra: Tổng 2 ký số
+                                </p>
+
+                            </div>
+                            <form class="row gy-3 align-items-center px-2">
+                                <div class="col-12 col-lg-4">
+                                    <input type="number" class="form-control form__input" id="inputSo"
+                                        placeholder="Nhập số có 2 chữ số">
+                                </div>
+                                <div class="col-12 col-lg-4">
+                                    <button class="btn btn--primary me-1 mb-1" type="button" id="btnTinhTong"
+                                        onClick="TinhTong2KySo();">
+                                        Tính tổng</button>
+                                </div>
+                                <div class="alert alert-success" role="alert">
+                                    👉 <span id="txtTong"></span>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
